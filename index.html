@@ -159,7 +159,7 @@
                     <div class="flex items-center gap-3 group">
                         <!-- IKS Logo -->
                         <div class="w-16 h-16 rounded-full flex items-center justify-center bg-white shadow-lg border-2 border-sky-800 overflow-hidden relative">
-                            <img src="/images/logo/IKS-logo.jpg" 
+                            <img src="/images/logo/iks_logo.jpg" 
                                  alt="IKS" 
                                  class="w-full h-full object-cover"
                                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
@@ -311,12 +311,21 @@
     <script>
         const appData = {
             upcomingEvent: {
-                title: "Inauguration of IKS SC",
-                description: "Join us for the grand opening ceremony and keynote address.",
-                venue: "IIT Hyderabad LHC 6",
-                date: "24th Jan 2025",
-                time: "6:30 PM",
-            },
+                    title: "Inauguration of IKS SC",
+                    description: "Join us for the grand opening ceremony and keynote address.",
+                    venue: "IIT Hyderabad LHC 6",
+                    date: "24th Jan 2026",
+                    time: "6:30 PM",
+                },
+            quizregistration: {
+                    title: "The Jnana Setu Quiz",
+                    description: "Test your knowledge of Ancient India in this exciting quiz competition and win exciting prizes!",
+                    venue: "IIT Hyderabad LHC 6",
+                    date: "24th Jan 2026",
+                    day: "Saturday",
+                    time: "4:30 PM",
+                    registrationlink: "https://forms.gle/NKDmWjSjWtARqk5v9",
+                },
             team: [
                 { name: "Dr. Saketha Nath Jagarlapudi", role: "Faculty Advisor", image: "/images/team/faculty.jpg", category: "advisor" },
                 { name: "Someshwar Ade", role: "Founder", image: "/images/team/someshwar.jpg", category: "founder" },
@@ -334,21 +343,22 @@
                 { name: "Koilada Bindu Madhava", role: "Event Coordination", image: "/images/team/madhav.jpg", category: "head" },
             ],
             slides: [
-                { id: 1, image: "/images/slides/slide1.jpg", text: "Curiosity meets innovation" },
-                { id: 2, image: "/images/slides/slide2.jpg", text: "A moment of inspiration" },
-                { id: 3, image: "/images/slides/slide3.jpg", text: "Where future minds take shape" },
-                { id: 4, image: "/images/slides/slide4.jpg", text: "Learning goes beyond classrooms" }
+                { id: 1, image: "/images/slides/QUIZ.jpg", text: "IKS-SC QUIZ" },
+                { id: 2, image: "/images/slides/INAGURATION.jpg", text: "Inauguration Ceremony" },
+                // { id: 3, image: "/images/slides/slide3.jpg", text: "Where future minds take shape" },
+                // { id: 4, image: "/images/slides/slide4.jpg", text: "Learning goes beyond classrooms" }
             ],
             gallery: [
-                { src: "/images/gallery/slide2.jpg", caption: "Outdoor discussion & Interaction" },
-                { src: "/images/gallery/slide3.jpg", caption: "Lecture hall & classroom session" },
-                { src: "/images/gallery/slide4.jpg", caption: "Indoor sports & activity hall" },
+                { src: "/images/gallery/Outdoor discussion & Interaction.jpg", caption: "Outdoor discussion & Interaction" },
+                { src: "/images/gallery/Lecture hall & classroom session.jpg", caption: "Lecture hall & classroom session" },
+                { src: "/images/gallery/Indoor sports & activity hall.jpg", caption: "Indoor sports & activity hall" },
+                //{ src: "/images/gallery/lecture.jpg", caption: "Guest Lecture Series" },
             ],
             blogs: [
                 {
                     id: 1,
                     title: "Ancient Water Management Systems",
-                    image: "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=800",
+                    image: "/images/blogs/Water-Management.jpg",
                     date: "February 2, 2025",
                     summary: "Exploring the engineering genius behind ancient Indian stepwells and irrigation canals.",
                     content: `<p class="mb-4">India's ancient civilization thrived on sophisticated water management systems...</p>`
@@ -356,7 +366,7 @@
                 {
                     id: 2,
                     title: "Understanding Indian Metallurgy",
-                    image: "https://images.unsplash.com/photo-1504221507732-5246cbb48d4e?q=80&w=800",
+                    image: "/images/blogs/metallurgy.jpg",
                     date: "December 15, 2024",
                     summary: "A deep dive into the Wootz steel production methods.",
                     content: `<p class="mb-4">India has a rich heritage in metallurgy...</p>`
@@ -364,6 +374,7 @@
             ],
             news: [
                 "Inauguration of IKS Student chapter at IIT Hyderabad.",
+                "Gurukul Visit under Shiksha-Parampara.",
                            ],
             goals: [
                 { title: "Preservation & Documentation", desc: "Document ancient texts, practices, and traditions.", icon: "fa-book-scroll", category: "Research" },
@@ -474,18 +485,61 @@
                         <i class="fa-solid fa-location-dot text-saffron-600"></i><span>${appData.upcomingEvent.venue}</span>
                     </div>
                     <div class="mt-auto transform group-hover:scale-105 transition">
-                        <div class="flex items-center gap-8 flex-wrap">
                         <div class="inline-flex items-center gap-2 bg-turmeric-500 border border-turmeric-500 text-white px-5 py-2.5 rounded-lg font-bold shadow-md">
                              <i class="fa-regular fa-calendar-xmark text-lg"></i><span>${appData.upcomingEvent.date}</span>
                         </div>
+                    </div>
+                    <div class="mt-auto transform group-hover:scale-105 transition">
                         <div class="inline-flex items-center gap-2 bg-turmeric-500 border border-turmeric-500 text-white px-5 py-2.5 rounded-lg font-bold shadow-md">
                             <i class="fa-regular fa-clock text-lg"></i><span>${appData.upcomingEvent.time}</span>
-                        </div>
                         </div>
                     </div>
                 </div>
             `;
             gridContainer.appendChild(eventBox);
+
+            // Quiz Box
+            const quizBox = document.createElement('div');
+            quizBox.className = "vedic-card h-full flex flex-col";
+            quizBox.innerHTML = `
+                <div class="bg-gradient-to-r from-saffron-600 to-saffron-500 p-5 flex items-center justify-between text-white">
+                    <div class="flex items-center gap-3"><i class="fa-solid fa-book text-xl bg-white/20 p-2 rounded-lg"></i><h3 class="font-serif text-lg font-bold tracking-wide">Quiz Registration</h3></div>
+                    <span class="text-xs font-bold text-saffron-600 bg-white px-3 py-1 rounded-full uppercase tracking-wider">Open</span>
+                </div>
+                <div class="p-8 flex-grow flex flex-col justify-center items-center text-center">
+                     <h4 class="font-serif font-bold text-2xl mb-3 text-sky-900 leading-tight">${appData.quizregistration.title}</h4>
+                        <p class="text-gray-600 mb-6 px-4">${appData.quizregistration.description}</p>
+                        <div class="mt-auto transform group-hover:scale-105 transition">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                                <div class="flex flex-col items-center justify-center gap-2 bg-saffron-light border border-saffron-200 text-gray-700 px-5 py-4 rounded-xl font-medium shadow-sm">
+                                    <div class="flex items-center gap-2 text-sm">
+                                        <i class="fa-regular fa-calendar-xmark text-saffron-500"></i><span>${appData.quizregistration.date}</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-xs text-gray-500">
+                                        <i class="fa-regular fa-calendar text-saffron-400"></i><span>${appData.quizregistration.day}</span>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-center justify-center gap-2 bg-saffron-light border border-saffron-200 text-gray-700 px-5 py-4 rounded-xl font-medium shadow-sm">
+                                    <div class="flex items-center gap-2 text-sm">
+                                        <i class="fa-solid fa-location-dot text-saffron-500"></i><span>${appData.quizregistration.venue}</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-xs text-gray-500">
+                                        <i class="fa-regular fa-clock text-saffron-400"></i><span>${appData.quizregistration.time}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-6 flex justify-center w-full">
+                            <a href="${appData.quizregistration.registrationlink}" target="_blank" class="block bg-gradient-to-r from-sky-700 to-sky-600 text-white font-bold text-lg px-6 py-4 rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
+                                <div class="flex items-center justify-center gap-3">
+                                    <i class="fa-solid fa-pen-to-square text-xl"></i><span>Register for Quiz</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            gridContainer.appendChild(quizBox);
 
             // News Box
             const newsBox = document.createElement('div');

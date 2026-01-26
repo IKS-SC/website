@@ -311,20 +311,10 @@
     <script>
         const appData = {
             upcomingEvent: {
-                    title: "Inauguration of IKS SC",
-                    description: "Join us for the grand opening ceremony and keynote address.",
-                    venue: "IIT Hyderabad LHC 6",
-                    date: "24th Jan 2026",
-                    time: "6:30 PM",
-                },
-            quizregistration: {
-                    title: "The Jnana Setu Quiz",
-                    description: "Test your knowledge of Ancient India in this exciting quiz competition and win exciting prizes!",
-                    venue: "IIT Hyderabad LHC 6",
-                    date: "24th Jan 2026",
-                    day: "Saturday",
-                    time: "4:30 PM",
-                    registrationlink: "https://forms.gle/NKDmWjSjWtARqk5v9",
+                    title: "Shiksha-Parampara- Gurukul Visit",
+                    description: "Join us to explore ancient educational traditions at a historic Gurukul.",
+                    venue: "To be Announced",
+                    date: "31st Jan 2025",
                 },
             team: [
                 { name: "Dr. Saketha Nath Jagarlapudi", role: "Faculty Advisor", image: "/images/team/faculty.jpg", category: "advisor" },
@@ -373,8 +363,7 @@
                 }
             ],
             news: [
-                "Inauguration of IKS Student chapter at IIT Hyderabad.",
-                "Gurukul Visit under Shiksha-Parampara.",
+                "Gurukul Visit under Shiksha-Parampara on 31st January.",
                            ],
             goals: [
                 { title: "Preservation & Documentation", desc: "Document ancient texts, practices, and traditions.", icon: "fa-book-scroll", category: "Research" },
@@ -471,7 +460,7 @@
             const gridContainer = document.createElement('div');
             gridContainer.className = "grid grid-cols-1 md:grid-cols-2 gap-10 mb-16";
 
-            // Event Box
+           // Event Box
             const eventBox = document.createElement('div');
             eventBox.className = "vedic-card h-full flex flex-col";
             eventBox.innerHTML = `
@@ -485,62 +474,14 @@
                      <div class="flex items-center gap-2 text-sm text-gray-700 mb-6 font-medium bg-saffron-light px-4 py-2 rounded-full border border-saffron-200">
                         <i class="fa-solid fa-location-dot text-saffron-600"></i><span>${appData.upcomingEvent.venue}</span>
                     </div>
-                    <div class="mt-auto transform group-hover:scale-105 transition">
-                        <div class="inline-flex items-center gap-2 bg-turmeric-500 border border-turmeric-500 text-white px-5 py-2.5 rounded-lg font-bold shadow-md">
-                             <i class="fa-regular fa-calendar-xmark text-lg"></i><span>${appData.upcomingEvent.date}</span>
-                        </div>
+                    <div class="flex items-center">
+                    <div class="inline-flex items-center gap-2 bg-turmeric-500 border border-turmeric-500 text-white px-5 py-2.5 rounded-lg font-bold shadow-md mr-2">
+                        <i class="fa-regular fa-calendar text-lg"></i><span>${appData.upcomingEvent.date}</span>
                     </div>
-                    <div class="mt-auto transform group-hover:scale-105 transition">
-                        <div class="inline-flex items-center gap-2 bg-turmeric-500 border border-turmeric-500 text-white px-5 py-2.5 rounded-lg font-bold shadow-md">
-                            <i class="fa-regular fa-clock text-lg"></i><span>${appData.upcomingEvent.time}</span>
-                        </div>
                     </div>
                 </div>
             `;
             gridContainer.appendChild(eventBox);
-
-            // Quiz Box
-            const quizBox = document.createElement('div');
-            quizBox.className = "vedic-card h-full flex flex-col";
-            quizBox.innerHTML = `
-                <div class="bg-gradient-to-r from-saffron-600 to-saffron-500 p-5 flex items-center justify-between text-white">
-                    <div class="flex items-center gap-3"><i class="fa-solid fa-book text-xl bg-white/20 p-2 rounded-lg"></i><h3 class="font-serif text-lg font-bold tracking-wide">Quiz Registration</h3></div>
-                    <span class="text-xs font-bold text-saffron-600 bg-white px-3 py-1 rounded-full uppercase tracking-wider">Open</span>
-                </div>
-                <div class="p-8 flex-grow flex flex-col justify-center items-center text-center">
-                     <h4 class="font-serif font-bold text-2xl mb-3 text-sky-900 leading-tight">${appData.quizregistration.title}</h4>
-                        <p class="text-gray-600 mb-6 px-4">${appData.quizregistration.description}</p>
-                        <div class="mt-auto transform group-hover:scale-105 transition">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
-                                <div class="flex flex-col items-center justify-center gap-2 bg-saffron-light border border-saffron-200 text-gray-700 px-5 py-4 rounded-xl font-medium shadow-sm">
-                                    <div class="flex items-center gap-2 text-sm">
-                                        <i class="fa-regular fa-calendar-xmark text-saffron-500"></i><span>${appData.quizregistration.date}</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 text-xs text-gray-500">
-                                        <i class="fa-regular fa-calendar text-saffron-400"></i><span>${appData.quizregistration.day}</span>
-                                    </div>
-                                </div>
-                                <div class="flex flex-col items-center justify-center gap-2 bg-saffron-light border border-saffron-200 text-gray-700 px-5 py-4 rounded-xl font-medium shadow-sm">
-                                    <div class="flex items-center gap-2 text-sm">
-                                        <i class="fa-solid fa-location-dot text-saffron-500"></i><span>${appData.quizregistration.venue}</span>
-                                    </div>
-                                    <div class="flex items-center gap-2 text-xs text-gray-500">
-                                        <i class="fa-regular fa-clock text-saffron-400"></i><span>${appData.quizregistration.time}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-6 flex justify-center w-full">
-                            <a href="${appData.quizregistration.registrationlink}" target="_blank" class="block bg-gradient-to-r from-sky-700 to-sky-600 text-white font-bold text-lg px-6 py-4 rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.03] transition-transform duration-300">
-                                <div class="flex items-center justify-center gap-3">
-                                    <i class="fa-solid fa-pen-to-square text-xl"></i><span>Register for Quiz</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            `;
-            gridContainer.appendChild(quizBox);
 
             // News Box
             const newsBox = document.createElement('div');
@@ -699,41 +640,28 @@
         function renderFAQ(container) { container.innerHTML = `<div class="max-w-3xl mx-auto fade-in"><div class="text-center mb-12"><span class="text-saffron-600 font-bold text-xs uppercase tracking-widest block mb-2">Help Center</span><h2 class="text-4xl font-serif font-bold text-sky-900">Frequently Asked Questions</h2></div><div class="space-y-4">${appData.faqs.map((faq, index) => `<div class="bg-white border border-gray-200 rounded-xl hover:border-saffron-300 transition cursor-pointer group shadow-sm" onclick="toggleFAQ(this)"><div class="p-6 flex items-center justify-between"><h3 class="font-bold text-lg text-sky-900 font-serif">${faq.q}</h3><div class="text-gray-400 group-hover:text-saffron-500 transition duration-300"><i class="fa-solid fa-chevron-down"></i></div></div><div class="faq-answer px-6 bg-gray-50 rounded-b-xl"><p class="text-gray-600 py-6 text-sm leading-relaxed border-t border-gray-100">${faq.a}</p></div></div>`).join('')}</div></div>`; }
         function initGoalsChart() { const ctx = document.getElementById('goalsChart'); if(!ctx) return; new Chart(ctx, { type: 'polarArea', data: { labels: ['Research', 'Education', 'Innovation', 'Society'], datasets: [{ label: 'Focus', data: [2, 3, 2, 3], backgroundColor: ['rgba(234, 88, 12, 0.8)', 'rgba(136, 19, 55, 0.8)', 'rgba(234, 179, 8, 0.8)', 'rgba(100, 100, 100, 0.8)'], borderWidth: 0 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { font: { family: '"Inter", sans-serif', size: 12 }, color: '#422006' } } }, scales: { r: { ticks: { display: false }, grid: { color: '#e5e7eb' } } } } }); }
 
-        // --- UPDATED IMAGE SLIDER LOGIC (Warm Overlay) ---
+        /// --- UPDATED IMAGE SLIDER LOGIC (Warm Overlay) ---
         function updateHeroSlide(container) { 
-    if (!container) container = document.getElementById('hero-slider');
-    if (!container) return;
+            if (!container) container = document.getElementById('hero-slider');
+            if (!container) return;
 
-    const slide = appData.slides[currentState.heroSlideIndex];
+            const slide = appData.slides[currentState.heroSlideIndex]; 
+            container.innerHTML = `
+                <div class="absolute inset-0 transition-opacity duration-1000 ease-in-out bg-sky-900">
+                    <img src="${slide.image}" 
+                         class="w-full h-full object-cover opacity-70 mix-blend-overlay"
+                         onerror="this.src='https://placehold.co/1200x600/0c4a6e/ffffff?text=Slide+${slide.id}'">
+                    
+                    <div class="absolute inset-0 flex flex-col items-center justify-end text-center px-4 pb-24">
+                        <div class="w-16 h-1 bg-turmeric-400 mx-auto mb-8 shadow-lg"></div>
+                        <p class="font-serif text-3xl md:text-5xl font-bold text-white drop-shadow-lg leading-tight max-w-4xl mx-auto tracking-wide mb-2 fade-in">
+                            "${slide.text}"
+                        </p>
+                    </div>
+                </div>
+            `;
+        }
 
-    container.innerHTML = `
-        <!-- Background blur layer -->
-        <div class="absolute inset-0">
-            <img 
-                src="${slide.image}"
-                class="w-full h-full object-cover blur-2xl scale-110 opacity-40"
-                alt=""
-            >
-        </div>
-
-        <!-- Foreground image (FULL CONTENT, NO CROP) -->
-        <div class="absolute inset-0 flex items-center justify-center">
-            <img 
-                src="${slide.image}"
-                alt="${slide.text}"
-                class="max-w-full max-h-full object-contain"
-                onerror="this.src='https://placehold.co/1280x720/000000/ffffff?text=Slide+${slide.id}'"
-            >
-        </div>
-
-        <!-- Text overlay -->
-        <div class="absolute inset-0 flex items-end justify-center pb-10">
-            <p class="font-serif text-2xl md:text-4xl font-bold text-white text-center px-6 drop-shadow-lg">
-                ${slide.text}
-            </p>
-        </div>
-    `;
-}
 
 
 

@@ -139,7 +139,7 @@
 
         /* News Ticker */
         .news-scroller { height: 100%; overflow: hidden; position: relative; }
-        .news-content { position: absolute; width: 100%; animation: scrollUp 15s linear infinite; }
+        .news-content { position: absolute; width: 100%; animation: scrollUp 8s linear infinite; }
         .news-content:hover { animation-play-state: paused; }
         @keyframes scrollUp { 0% { top: 100%; } 100% { top: -150%; } }
     </style>
@@ -333,16 +333,33 @@
                 { name: "Koilada Bindu Madhava", role: "Event Coordination", image: "/images/team/madhav.jpg", category: "head" },
             ],
             slides: [
-                { id: 1, image: "/images/slides/quiz.png", text: "IKS-SC QUIZ" },
-                { id: 2, image: "/images/slides/inauguration.png", text: "Inauguration Ceremony" },
-                // { id: 3, image: "/images/slides/slide3.jpg", text: "Where future minds take shape" },
-                // { id: 4, image: "/images/slides/slide4.jpg", text: "Learning goes beyond classrooms" }
+                { id: 1, image: "/images/slides/inaguration(2).jpg", text: "Inauguration Ceremony" },
+                { id: 2, image: "/images/slides/inauguration(6).jpg", text: "Inauguration Ceremony" },
+                { id: 3, image: "/images/slides/inauguration(9).jpg", text: "Inauguration Ceremony" },
+                { id: 4, image: "/images/slides/inauguration(11).jpg", text: "Inauguration Ceremony" },
+                // { id: 5, image: "/images/slides/slide3.jpg", text: "Where future minds take shape" },
+                // { id: 6, image: "/images/slides/slide4.jpg", text: "Learning goes beyond classrooms" }
             ],
             gallery: [
                 { src: "/images/gallery/Outdoor discussion & Interaction.jpg", caption: "Outdoor discussion & Interaction" },
                 { src: "/images/gallery/Lecture hall & classroom session.jpg", caption: "Lecture hall & classroom session" },
                 { src: "/images/gallery/Indoor sports & activity hall.jpg", caption: "Indoor sports & activity hall" },
                 //{ src: "/images/gallery/lecture.jpg", caption: "Guest Lecture Series" },
+                { src: "/images/gallery/inaguration.jpg", caption: "Inauguration" },
+                { src: "/images/gallery/inaguration(1).jpg", caption: "Inauguration" },
+                //{ src: "/images/gallery/inaguration(2).jpg", caption: "Inauguration" },
+                { src: "/images/gallery/inaguration(3).jpg", caption: "Inauguration" },
+                { src: "/images/gallery/inaguration(4).jpg", caption: "Inauguration" },
+                { src: "/images/gallery/inaguration(5).jpg", caption: "Inauguration" },
+                //{ src: "/images/gallery/inaguration(6).jpg", caption: "Inauguration" },
+                { src: "/images/gallery/inaguration(7).jpg", caption: "Inauguration" },
+                { src: "/images/gallery/inaguration(8).jpg", caption: "Inauguration" },
+                //{ src: "/images/gallery/inaguration(9).jpg", caption: "Inauguration" },
+                { src: "/images/gallery/inaguration(10).jpg", caption: "Inauguration" },
+                //{ src: "/images/gallery/inaguration(11).jpg", caption: "Inauguration" },
+                { src: "/images/gallery/inaguration(12).jpg", caption: "Inauguration" },
+                { src: "/images/gallery/inaguration(13).jpg", caption: "Inauguration" },
+                { src: "/images/gallery/inaguration(14).jpg", caption: "Inauguration" },
             ],
             blogs: [
                 {
@@ -647,17 +664,20 @@
 
             const slide = appData.slides[currentState.heroSlideIndex]; 
             container.innerHTML = `
-                <div class="absolute inset-0 transition-opacity duration-1000 ease-in-out bg-sky-900">
+                <div class="absolute inset-0 transition-opacity duration-700 ease-in-out bg-black">
                     <img src="${slide.image}" 
-                         class="w-full h-full object-cover opacity-70 mix-blend-overlay"
-                         onerror="this.src='https://placehold.co/1200x600/0c4a6e/ffffff?text=Slide+${slide.id}'">
-                    
+                        class="w-full h-full object-cover opacity-90"
+                        onerror="this.src='https://placehold.co/1200x600/000000/ffffff?text=Slide+${slide.id}'">
+
+                    <!-- soft dark overlay ONLY for text readability -->
+                    <div class="absolute inset-0 bg-black/30"></div>
+
                     <div class="absolute inset-0 flex flex-col items-center justify-end text-center px-4 pb-24">
                         <div class="w-16 h-1 bg-turmeric-400 mx-auto mb-8 shadow-lg"></div>
-                        <p class="font-serif text-3xl md:text-5xl font-bold text-white drop-shadow-lg leading-tight max-w-4xl mx-auto tracking-wide mb-2 fade-in">
+                        <p class="font-serif text-3xl md:text-5xl font-bold text-white drop-shadow-lg leading-tight max-w-4xl mx-auto tracking-wide fade-in">
                             "${slide.text}"
                         </p>
-                    </div>
+                 </div>
                 </div>
             `;
         }

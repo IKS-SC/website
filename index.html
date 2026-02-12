@@ -310,11 +310,11 @@
     <!-- JAVASCRIPT LOGIC -->
     <script>
         const appData = {
-            upcomingEvent: {
-                    title: "Shiksha-Parampara- Gurukul Visit",
-                    description: "Join us to explore ancient educational traditions at a historic Gurukul.",
-                    venue: "Saandeepani Gurukul, Vikarabad",
-                    date: "31st Jan 2025",
+            recruitment: {
+                title: "IKS Student Chapter Team RECRUITMENT",
+                description: "Join us to explore India's rich heritage and contribute to research, documentation, and innovation in Indian Knowledge Systems.",
+                eligibility: "Open to all IIT Hyderabad students. No prior experience in IKS required.",
+                link: "Apply Now!",
                 },
             team: [
                 { name: "Dr. Saketha Nath Jagarlapudi", role: "Faculty Advisor", image: "/images/team/faculty.jpg", category: "advisor" },
@@ -380,7 +380,14 @@
                 }
             ],
             news: [
-                "Gurukul Visit under Shiksha-Parampara on 31st January.",
+                "Samvada on Indian Knowledge Systems.",
+                "Adhyayana-Manana sessions: Engaging with Indian knowledge.(Feb)",
+                "IKS-Themed Film Screening.",
+                "Adhyayana-Manana sessions: Engaging with Indian knowledge.(March)",
+                "Samskritha Paribhramana(14-15 March): Hosting a heritage walk based on village, architecture, and temple traditions",
+                "Bharatiya Chikitsa Exposure(28-29 March): Exploring KVK(Krishna Vignan Kendra) & Organic Farming.",
+                "Samaja-Samparka: Outreach and Field Engagement.(April)",
+                Field visit(11-12 April): Community Interaction and Exploring Traditional knowledge.",
                            ],
             goals: [
                 { title: "Preservation & Documentation", desc: "Document ancient texts, practices, and traditions.", icon: "fa-book-scroll", category: "Research" },
@@ -486,15 +493,14 @@
                     <span class="text-xs font-bold text-sky-900 bg-turmeric-400 px-3 py-1 rounded-full uppercase tracking-wider">Live</span>
                 </div>
                 <div class="p-8 flex-grow flex flex-col justify-center items-center text-center">
-                     <h4 class="font-serif font-bold text-2xl mb-3 text-sky-900 leading-tight">${appData.upcomingEvent.title}</h4>
-                     <p class="text-gray-600 mb-6 px-4">${appData.upcomingEvent.description}</p>
-                     <div class="flex items-center gap-2 text-sm text-gray-700 mb-6 font-medium bg-saffron-light px-4 py-2 rounded-full border border-saffron-200">
-                        <i class="fa-solid fa-location-dot text-saffron-600"></i><span>${appData.upcomingEvent.venue}</span>
-                    </div>
-                    <div class="flex items-center">
-                    <div class="inline-flex items-center gap-2 bg-turmeric-500 border border-turmeric-500 text-white px-5 py-2.5 rounded-lg font-bold shadow-md mr-2">
-                        <i class="fa-regular fa-calendar text-lg"></i><span>${appData.upcomingEvent.date}</span>
-                    </div>
+                     <h4 class="font-serif font-bold text-2xl mb-3 text-sky-900 leading-tight">${appData.recruitment.title}</h4>
+                     <p class="text-gray-600 mb-6 px-4">${appData.recruitment.description}</p>
+                     <div class="mt-auto transform group-hover:scale-105 transition">
+                            <a href="${appData.recruitment.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-turmeric-500 border border-turmeric-500 text-white px-5 py-2.5 rounded-lg font-bold shadow-md hover:scale-105 transition">
+                                <i class="text-lg"></i><span>Apply Now!</span>
+                            </a>
+                        </div>
+                        <p class="text-xs text-gray-500 font-serif mb-6 px-4 mt-4">${appData.recruitment.eligibility}</p>
                     </div>
                 </div>
             `;
@@ -517,7 +523,7 @@
             const blogWrapper = document.createElement('div');
             blogWrapper.innerHTML = `
                 <div class="flex justify-between items-end mb-4 px-1 border-b-2 border-turmeric-100 pb-2">
-                    <h3 class="font-serif font-bold text-sky-900 text-2xl flex items-center gap-3"><i class="fa-solid fa-pen-nib text-saffron-500"></i> Blog</h3>
+                    <h3 class="font-serif font-bold text-sky-900 text-2xl flex items-center gap-3"><i class="fa-solid fa-spa text-saffron-500"></i> Inner Wellness & Development</h3>
                     <button onclick="navigateTo('blogs')" class="text-xs font-bold text-saffron-600 hover:text-sky-900 transition uppercase tracking-widest flex items-center gap-1">View All <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
                 <div class="vedic-card h-full group cursor-pointer" onclick="navigateTo('blog-post', ${latestBlog.id})">
@@ -697,3 +703,4 @@
 </body>
 
 </html>
+

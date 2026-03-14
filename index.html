@@ -665,7 +665,7 @@
                     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto px-4">
                         ${appData.team.filter(m => m.category === 'head').map(member => `
                             <div class="bg-white rounded-lg p-5 border border-turmeric-100 hover:border-saffron-500 hover:shadow-md transition group">
-                                <div class="w-20 h-20 mx-auto rounded-full overflow-hidden mb-4 bg-saffron-light shadow-inner group-hover:scale-110 transition duration-300"><img src="${member.image}" alt="${member.name}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500" onerror="this.src='https://placehold.co/80x80/fff7ed/0c4a6e?text=${member.name.charAt(0)}'"></div>
+                                <div class="w-20 h-20 mx-auto rounded-full overflow-hidden mb-4 bg-saffron-light shadow-inner group-hover:scale-110 transition duration-300"><img src="${member.image}" alt="${member.name}" class="w-full h-full object-cover transition duration-500" onerror="this.src='https://placehold.co/80x80/fff7ed/0c4a6e?text=${member.name.charAt(0)}'"></div>
                                 <h4 class="text-sm font-bold text-sky-900 leading-tight mb-1">${member.name}</h4>
                                 <p class="text-[10px] text-saffron-600 uppercase tracking-wide font-bold">${member.role}</p>
                             </div>

@@ -322,7 +322,6 @@
                 { name: "Kunal Supekar", role: "Founder", image: "/images/team/kunal.png", category: "founder" },
                 { name: "Nilay Parsodkar", role: "Founder", image: "/images/team/nilay.png", category: "founder" },
                 { name: "Mahesh Thombare", role: "Founder & President", image: "/images/team/mahesh.jpg", category: "founder" },
-                { name: "Sudarshan Saravanan", role: "General Secretary", image: "/images/team/sudarshan.jpg", category: "gsec" },
                 { name: "Srijita Chakraborty", role: "Research, Innovation & Documentation", image: "/images/team/srijita.jpg", category: "head" },
                 { name: "Janhavi Tale", role: "Design & Media", image: "/images/team/janhavi.jpg", category: "head" },
                 { name: "Ruchir Dudhankar", role: "Social Media Handling", image: "/images/team/ruchir.jpg", category: "head" },
@@ -640,20 +639,6 @@
                                 <div class="w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-turmeric-100 mb-4"><img src="${member.image}" alt="${member.name}" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/128x128/eab308/ffffff?text=${member.name.charAt(0)}'"></div>
                                 <h4 class="text-lg font-bold text-sky-900">${member.name}</h4>
                                 <p class="text-turmeric-500 text-xs font-bold uppercase tracking-wide mt-1">${member.role}</p>
-                            </div>
-                        `).join('')}
-                    </div>
-                </div>
-
-                <!-- Gen Sec -->
-                <div class="mb-20 text-center relative fade-in">
-                    <div class="h-10 w-px bg-turmeric-200 mx-auto mb-6 -mt-4"></div>
-                    <div class="flex justify-center gap-8 flex-wrap">
-                        ${appData.team.filter(m => m.category === 'gsec').map(member => `
-                            <div class="bg-white rounded-xl shadow-md p-5 w-64 border-b-4 border-sky-900 hover:shadow-lg transition">
-                                <div class="w-24 h-24 mx-auto rounded-full overflow-hidden border-2 border-turmeric-100 mb-3"><img src="${member.image}" alt="${member.name}" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/120x120/0c4a6e/ffffff?text=${member.name.charAt(0)}'"></div>
-                                <h4 class="text-lg font-bold text-sky-900">${member.name}</h4>
-                                <p class="text-gray-500 text-xs font-bold uppercase tracking-wide">${member.role}</p>
                             </div>
                         `).join('')}
                     </div>

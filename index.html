@@ -310,12 +310,6 @@
     <!-- JAVASCRIPT LOGIC -->
     <script>
         const appData = {
-            recruitment: {
-                title: "IKS SC Team RECRUITMENT",
-                description: "Join us to explore India's rich heritage and contribute to research, documentation, and innovation in Indian Knowledge Systems.",
-                eligibility: "Open to all IIT Hyderabad students. No prior experience in IKS required.",
-                link: "https://docs.google.com/forms/d/e/1FAIpQLScAUyQbpgd0vAkNgRfLLqoZxAmQWmPskVRk2fV0tVY0WWtAtQ/viewform",
-                },
             team: [
                 { name: "Dr. Saketha Nath Jagarlapudi", role: "Faculty Advisor", image: "/images/team/faculty.jpg", category: "advisor" },
                 { name: "Someshwar Ade", role: "Founder", image: "/images/team/someshwar.jpg", category: "founder" },
@@ -323,7 +317,6 @@
                 { name: "Nilay Parsodkar", role: "Founder", image: "/images/team/nilay.png", category: "founder" },
                 { name: "Mahesh Thombare", role: "Founder & President", image: "/images/team/mahesh.jpg", category: "founder" },
                 { name: "Srijita Chakraborty", role: "Research, Innovation & Documentation", image: "/images/team/srijita.jpg", category: "head" },
-                { name: "Janhavi Tale", role: "Design & Media", image: "/images/team/janhavi.jpg", category: "head" },
                 { name: "Ruchir Dudhankar", role: "Social Media Handling", image: "/images/team/ruchir.jpg", category: "head" },
                 { name: "Prashant Kumar", role: "Logistics & Operation", image: "/images/team/prashant.jpg", category: "head" },
                 { name: "Aditi Tripathi", role: "Inner Development & Wellness", image: "/images/team/aditi.JPG", category: "head" },
@@ -505,28 +498,6 @@
             contentWrapper.className = "container mx-auto px-4 py-20";
             const gridContainer = document.createElement('div');
             gridContainer.className = "grid grid-cols-1 md:grid-cols-2 gap-10 mb-16";
-
-           // Event Box
-            const eventBox = document.createElement('div');
-            eventBox.className = "vedic-card h-full flex flex-col";
-            eventBox.innerHTML = `
-                <div class="bg-gradient-to-r from-sky-900 to-sky-800 p-5 flex items-center justify-between text-white">
-                    <div class="flex items-center gap-3"><i class="fa-regular fa-calendar-check text-xl bg-white/20 p-2 rounded-lg"></i><h3 class="font-serif text-lg font-bold tracking-wide">Recruitment</h3></div>
-                    <span class="text-xs font-bold text-sky-900 bg-turmeric-400 px-3 py-1 rounded-full uppercase tracking-wider">Open</span>
-                </div>
-                <div class="p-8 flex-grow flex flex-col justify-center items-center text-center">
-                     <h4 class="font-serif font-bold text-2xl mb-3 text-sky-900 leading-tight">${appData.recruitment.title}</h4>
-                     <p class="text-gray-600 mb-6 px-4">${appData.recruitment.description}</p>
-                     <div class="mt-auto transform group-hover:scale-105 transition">
-                            <a href="${appData.recruitment.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-turmeric-500 border border-turmeric-500 text-white px-5 py-2.5 rounded-lg font-bold shadow-md hover:scale-105 transition">
-                                <i class="text-lg"></i><span>Apply Now!</span>
-                            </a>
-                        </div>
-                        <p class="text-xs text-gray-500 font-serif mb-6 px-4 mt-4">${appData.recruitment.eligibility}</p>
-                    </div>
-                </div>
-            `;
-            gridContainer.appendChild(eventBox);
 
             // News Box
             const newsBox = document.createElement('div');
